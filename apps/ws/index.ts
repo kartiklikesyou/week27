@@ -12,8 +12,8 @@ Bun.serve({
         message(ws,message){
             prismaClient.user.create({
                 data:{
-                    username: Math.random.toString(),
-                    password: Math.random.toString()
+                    username: Math.random().toString(),
+                    password: Math.random().toString()
                 }
             })
             ws.send(message)
