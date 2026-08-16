@@ -1,4 +1,4 @@
-name: Deploy the backend
+name: Deploy the websocket
 on:
   push:
     branches: [ main ]
@@ -19,6 +19,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: ./docker/Dockerfile.backend
+          file: ./docker/Dockerfile.websocket
           push: true
-          tags: kartiklikesyou/week27-backend:${{ github.sha }}
+          tags: kartiklikesyou/week27-websocket:${{ github.sha }}
